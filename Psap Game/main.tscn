@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://b71276qpxqdon"]
+[gd_scene load_steps=3 format=3 uid="uid://b71276qpxqdon"]
+
+[ext_resource type="Texture2D" uid="uid://bi1oiw0c58cl" path="res://icon.svg" id="1_sheom"]
+[ext_resource type="Script" path="res://Sprite2D.gd" id="2_kla5c"]
 
 [node name="Main" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(65, 65)
+texture = ExtResource("1_sheom")
+script = ExtResource("2_kla5c")
