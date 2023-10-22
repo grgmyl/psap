@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://be477cgkwdffh"]
+
+[ext_resource type="Script" path="res://Scenes/ObjectsCollectables/parent_object.gd" id="1_c3ibw"]
+[ext_resource type="Texture2D" uid="uid://bi1oiw0c58cl" path="res://Graphics/icon.svg" id="1_sqv2g"]
+[ext_resource type="Texture2D" uid="uid://dd06bisv6kmsb" path="res://Graphics/Lights/circle.png" id="2_4xtki"]
+
+[node name="ParentObject" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_c3ibw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_sqv2g")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.277344, 0.546875, 0.746094, 1)
+energy = 3.66
+texture = ExtResource("2_4xtki")
+texture_scale = 0.25
+
+[node name="GlowTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="GlowTimer" to="." method="_on_glow_timer_timeout"]

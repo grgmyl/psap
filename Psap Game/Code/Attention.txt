@@ -1,2 +1,0 @@
-Όταν κάνετε attack script σε ένα node, να ορίζεται ως directory αυτό.
-Αν αφήσετε το default directory και μετα το κάνεται drag and drop εδώ θα έχουμε πρόβλημα
