@@ -5,8 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://dd06bisv6kmsb" path="res://Graphics/Lights/circle.png" id="2_4xtki"]
 
 [node name="ParentObject" type="Area2D"]
-collision_layer = 8
+collision_layer = 16
 script = ExtResource("1_c3ibw")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 

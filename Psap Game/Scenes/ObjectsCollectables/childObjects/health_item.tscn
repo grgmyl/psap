@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0elpbpkcvfji"]
+
+[ext_resource type="PackedScene" uid="uid://be477cgkwdffh" path="res://Scenes/ObjectsCollectables/parent_object.tscn" id="1_4ftg1"]
+[ext_resource type="Texture2D" uid="uid://d2jjumygwfe6a" path="res://Graphics/items/healItem.png" id="2_bfu77"]
+[ext_resource type="Script" path="res://Scenes/ObjectsCollectables/childObjects/health_item.gd" id="2_i4s2m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wnkf1"]
+radius = 22.0
+
+[node name="healthItem" instance=ExtResource("1_4ftg1")]
+script = ExtResource("2_i4s2m")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_wnkf1")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_bfu77")
+
+[node name="PointLight2D" parent="." index="2"]
+color = Color(0.996094, 0, 0, 1)
