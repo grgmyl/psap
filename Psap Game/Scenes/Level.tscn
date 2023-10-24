@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c84qhaweiu1la"]
+[gd_scene load_steps=17 format=3 uid="uid://c84qhaweiu1la"]
 
 [ext_resource type="Texture2D" uid="uid://bmhnf55tehw6e" path="res://Graphics/2 Background/Day/1.png" id="1_lkvef"]
 [ext_resource type="Texture2D" uid="uid://cid1l5h07gp48" path="res://Graphics/2 Background/Day/2.png" id="2_s6igh"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b68voxf7382bu" path="res://Graphics/1 Tiles/Tileset.png" id="11_b2pxn"]
 [ext_resource type="PackedScene" uid="uid://bxvq1v782u6ta" path="res://Scenes/Player.tscn" id="12_cr1mo"]
 [ext_resource type="PackedScene" uid="uid://b0elpbpkcvfji" path="res://Scenes/ObjectsCollectables/childObjects/health_item.tscn" id="13_636gh"]
+[ext_resource type="PackedScene" uid="uid://p8pi022bctp4" path="res://Scenes/ObjectsCollectables/childObjects/boost.tscn" id="14_55y8l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_if450"]
 texture = ExtResource("11_b2pxn")
@@ -393,3 +394,6 @@ scale = Vector2(0.4, 0.4)
 
 [node name="healthItem" parent="." instance=ExtResource("13_636gh")]
 position = Vector2(-472, 146)
+
+[node name="Boost" parent="." instance=ExtResource("14_55y8l")]
+position = Vector2(-337, 210)

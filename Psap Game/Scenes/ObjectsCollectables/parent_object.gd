@@ -16,5 +16,5 @@ func _on_body_entered(body):
 		
 func _on_glow_timer_timeout():
 	var glowTween = create_tween()
-	glowTween.tween_property($PointLight2D,"energy",3.5,0.5)
-	glowTween.tween_property($PointLight2D,"energy",5,0.5)
+	glowTween.tween_property($PointLight2D,"energy",0.5,0.75)
+	glowTween.tween_property($PointLight2D,"energy",2,0.75)

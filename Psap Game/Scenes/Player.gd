@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+var SPEED = 300.0
+var JUMP_VELOCITY = -400.0
 var direction
 var health = 100
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -13,6 +13,12 @@ func collect(itemType, value):
 		health += value
 		if health>100:
 			health=100
+	if itemType == "Boost":
+		SPEED*= 2
+		$BoostTimer.start()
+
+func _on_boost_timer_timeout():     #Αναιρεί το Boost στο τέλος του χρόνου
+	SPEED /= 2
 
 func _physics_process(delta):
 	
@@ -30,3 +36,6 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+
+
