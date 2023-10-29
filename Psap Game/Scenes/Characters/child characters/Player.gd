@@ -6,7 +6,7 @@ func _ready():
 	health = 100
 
 
-func collect(itemType, value):
+func collect(itemType, value): 
 	if itemType=="healthPotion":
 		health += value
 		if health>100:

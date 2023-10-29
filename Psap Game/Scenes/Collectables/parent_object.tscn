@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://be477cgkwdffh"]
 
-[ext_resource type="Script" path="res://Scenes/ObjectsCollectables/parent_object.gd" id="1_c3ibw"]
+[ext_resource type="Script" path="res://Scenes/Collectables/parent_object.gd" id="1_c3ibw"]
 [ext_resource type="Texture2D" uid="uid://bi1oiw0c58cl" path="res://Graphics/icon.svg" id="1_sqv2g"]
 [ext_resource type="Texture2D" uid="uid://dd06bisv6kmsb" path="res://Graphics/Lights/circle.png" id="2_4xtki"]
 

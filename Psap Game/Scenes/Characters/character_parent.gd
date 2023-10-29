@@ -12,9 +12,11 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func hit(dmg,knockback, dmg_Vector2):   #Ειναι το function για να δέχονται dmg και knockback οι χαρακτήρες
 	movementEnable = false
 	health= health-dmg
-	velocity = Vector2(knockback,knockback)*(position-dmg_Vector2)
-	$KnockbackTimer.start()
-
+	if health<=0:
+		queue_free()
+	else:
+		velocity = Vector2(knockback,knockback)*(position-dmg_Vector2)
+		$KnockbackTimer.start()
 
 func _on_knockback_timer_timeout():
 	movementEnable=true

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://p8pi022bctp4"]
 
-[ext_resource type="PackedScene" uid="uid://be477cgkwdffh" path="res://Scenes/ObjectsCollectables/parent_object.tscn" id="1_ag67l"]
-[ext_resource type="Script" path="res://Scenes/ObjectsCollectables/childObjects/boost.gd" id="2_godus"]
+[ext_resource type="PackedScene" uid="uid://be477cgkwdffh" path="res://Scenes/Collectables/parent_object.tscn" id="1_ag67l"]
+[ext_resource type="Script" path="res://Scenes/Collectables/childCollectables/boost.gd" id="2_godus"]
 [ext_resource type="Texture2D" uid="uid://dr3pj6sbcywt2" path="res://Graphics/items/boost.png" id="3_8mpyk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7hayx"]
