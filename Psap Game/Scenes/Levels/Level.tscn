@@ -392,7 +392,7 @@ layer_0/tile_data = PackedInt32Array(524231, 65536, 0, 524230, 327680, 1, 524229
 position = Vector2(237, 41)
 
 [node name="Boost" parent="." instance=ExtResource("13_jka3p")]
-position = Vector2(616, 146)
+position = Vector2(436, 105)
 
 [node name="healthItem" parent="." instance=ExtResource("14_ub2ex")]
 position = Vector2(33, 70)

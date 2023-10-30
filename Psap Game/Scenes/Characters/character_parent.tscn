@@ -1,6 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1mpy1athl3o2"]
+[gd_scene load_steps=5 format=3 uid="uid://d1mpy1athl3o2"]
 
 [ext_resource type="Script" path="res://Scenes/Characters/character_parent.gd" id="1_6u4hg"]
+[ext_resource type="Script" path="res://Scenes/Characters/HPbar.gd" id="2_dvavn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ob7cx"]
+bg_color = Color(0.552941, 0, 0.0117647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kc4xw"]
+bg_color = Color(0, 0.878431, 0.117647, 1)
+border_color = Color(0, 0.45098, 0.0392157, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="CharacterParent" type="CharacterBody2D"]
 collision_layer = 3
@@ -17,4 +34,19 @@ script = ExtResource("1_6u4hg")
 wait_time = 0.25
 autostart = true
 
+[node name="HPbar" type="ProgressBar" parent="."]
+offset_left = -108.0
+offset_top = -120.0
+offset_right = 108.0
+offset_bottom = -93.0
+theme_override_styles/background = SubResource("StyleBoxFlat_ob7cx")
+theme_override_styles/fill = SubResource("StyleBoxFlat_kc4xw")
+value = 100.0
+script = ExtResource("2_dvavn")
+
+[node name="DisappearTimer" type="Timer" parent="HPbar"]
+wait_time = 1.5
+one_shot = true
+
 [connection signal="timeout" from="KnockbackTimer" to="." method="_on_knockback_timer_timeout"]
+[connection signal="timeout" from="HPbar/DisappearTimer" to="HPbar" method="_on_disappear_timer_timeout"]
