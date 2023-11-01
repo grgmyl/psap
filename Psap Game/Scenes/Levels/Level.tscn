@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c84qhaweiu1la"]
+[gd_scene load_steps=18 format=3 uid="uid://c84qhaweiu1la"]
 
 [ext_resource type="Texture2D" uid="uid://bmhnf55tehw6e" path="res://Graphics/2 Background/Day/1.png" id="1_lkvef"]
 [ext_resource type="Texture2D" uid="uid://cid1l5h07gp48" path="res://Graphics/2 Background/Day/2.png" id="2_s6igh"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dgtofd2evnwyp" path="res://Scenes/Characters/child characters/Player.tscn" id="12_0me82"]
 [ext_resource type="PackedScene" uid="uid://p8pi022bctp4" path="res://Scenes/Collectables/childCollectables/boost.tscn" id="13_jka3p"]
 [ext_resource type="PackedScene" uid="uid://b0elpbpkcvfji" path="res://Scenes/Collectables/childCollectables/health_item.tscn" id="14_ub2ex"]
+[ext_resource type="PackedScene" uid="uid://bkwstkasudsoi" path="res://Scenes/Characters/child characters/enemies/turret_enemy.tscn" id="15_o4swf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_if450"]
 texture = ExtResource("11_b2pxn")
@@ -396,3 +397,6 @@ position = Vector2(436, 105)
 
 [node name="healthItem" parent="." instance=ExtResource("14_ub2ex")]
 position = Vector2(33, 70)
+
+[node name="TurretEnemy" parent="." instance=ExtResource("15_o4swf")]
+position = Vector2(1001, 128)
