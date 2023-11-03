@@ -12,6 +12,7 @@ func collect(itemType, value):
 		if health>100:
 			health=100
 		$HPbar/DisappearTimer.start()
+		$HPbar.value=health
 		$HPbar.modulate = Color(1,1,1,1)
 	if itemType == "Boost":
 		SPEED*= 2
